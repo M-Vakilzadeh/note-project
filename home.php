@@ -46,7 +46,8 @@ if (!$isGuest){
                     <li>Descriptions</li>
                     <li>DateAndTimes</li>
                     <li style="border: 1px solid #808080;border-radius: 20px;">IsDone</li>
-                    <li style="border: 1px solid #808080;border-radius: 20px;">remove</li>
+                    <li style="border: 1px solid #808080;border-radius: 20px;">Remove</li>
+                    <li style="border: 1px solid #808080;border-radius: 20px;">Edit</li>
                 </ul>
         <?  if ($records == null){$records = array(); }  
             foreach ($records as $record){
@@ -63,6 +64,7 @@ if (!$isGuest){
                     <li><?=$record['eventTime']?></li>
                     <li><a href="done.php?id=<?=$record['note_id']?>"><button class="btn-check">Done</button></a></li>
                     <li><a href="delete.php?id=<?=$record['note_id']?>"><button class="btn-check">Del</button></a></li>
+                    <li><a href="edit-note.php?id=<?=$record['note_id']?>"><button class="btn-check">edit</button></a></li>
                 </ul>
         <?  } ?>
                 <a href="add-note.php"><button class="btn mt50">Add notes</button></a>
