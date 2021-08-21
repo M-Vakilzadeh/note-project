@@ -9,7 +9,7 @@
     //$db = Db::getInstance();
     //$records = $db->query("SELECT * FROM x_note");
     //dump($records);
-  require_once('home.php')
+    require_once('home.php')
   ?>
 </body>
 </html>

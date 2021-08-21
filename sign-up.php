@@ -32,7 +32,7 @@
         </form>
     </div>
 
-    <div class=question>have an account?</div>
+    <div class=haveAccount>have an account?</div>
     <a href="sign-in.php"><button class="btn w100">sign-in</button></a>
     <a href="home.php"><button class="btn w100">home</button></a>   
 

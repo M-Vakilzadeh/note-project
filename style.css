@@ -4,12 +4,12 @@
 }
 
 body {
-margin: 20px;
-background-color: white;
-color:#808080;
-font-family: 'Franklin Gothic Medium';
-font-size: 14pt;
-padding: 10px 0px 0px 0px;
+    margin: 20px;
+    background-color: white;
+    color:#808080;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 14pt;
+    padding: 10px 0px 0px 0px;
 
 }
 
@@ -24,63 +24,61 @@ padding: 10px 0px 0px 0px;
 
 }
 .btn {
-background-color: #ffcb6a;
-margin: 10px 10px;
-color: #747474;
-padding: 5px 10px;
-cursor: pointer;
-border: #ffcb6a 1px solid;
-border-radius: 15px;
-font-size: 14pt;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;}
+    background-color: #ffcb6a;
+    margin: 10px 10px;
+    color: #747474;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: #ffcb6a 1px solid;
+    border-radius: 15px;
+    font-size: 14pt;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
 .btn:hover {
-background-color: orange;
-color: #fff;
-box-shadow: 0px 1px 1px rgb(185, 185, 185);
-transition: 0.5s;
+    background-color: orange;
+    color: #fff;
+    box-shadow: 0px 1px 1px rgb(185, 185, 185);
+    transition: 0.5s;
 }
 
 .btn-check {
-background-color: #ffcb6a;
-color: #747474;
-cursor: pointer;
-border: #ffcb6a 1px solid;
-border-radius: 15px;
-font-size: 14pt;
-padding: 4px 10px;
+    background-color: #ffcb6a;
+    color: #747474;
+    cursor: pointer;
+    border: #ffcb6a 1px solid;
+    border-radius: 15px;
+    font-size: 14pt;
+    padding: 4px 10px;
 }
 
 .btn-check:hover {
-background-color: orange;
-color: #fff;
-transition: 0.5s;
+    background-color: orange;
+    color: #fff;
+    transition: 0.5s;
 }
 
 input {
-border: 1px solid #ddd;
-font-size: 13pt;
-padding: 8px 10px;
-margin: 10px;
-width: 500px;
-border-radius: 20px;
-transition: 0.5s;
-
+    border: 1px solid #ddd;
+    font-size: 13pt;
+    padding: 8px 10px;
+    margin: 10px;
+    width: 500px;
+    border-radius: 20px;
+    transition: 0.5s;
 }
 input:hover {
-border: 1px solid orange;
-box-shadow: 0px 1px 1px rgb(204, 204, 204);
-transition: 0.5s;
-outline: none;
-
+    border: 1px solid orange;
+    box-shadow: 0px 1px 1px rgb(204, 204, 204);
+    transition: 0.5s;
+    outline: none;
 }
+
 input:focus {
-border: 1px solid orange;
-border-radius: 20px;
-box-shadow: 0px 1px 1px rgb(204, 204, 204);
-outline: none;
-
-
+    border: 1px solid orange;
+    border-radius: 20px;
+    box-shadow: 0px 1px 1px rgb(204, 204, 204);
+    outline: none;
 }
 
 
@@ -93,45 +91,22 @@ textarea {
     border-radius: 20px;
     outline: none;
     height: 270px;
-    resize: vertical;
+    resize: vertical; 
+}
 
-
-    
-    }
 textarea:hover {
     border: 1px solid orange;
     box-shadow: 0px 1px 1px rgb(204, 204, 204);
     outline: none;
-
-    
 }
+
 textarea:focus {
-border: 1px solid orange;
-border-radius: 20px;
-box-shadow: 0px 1px 1px rgb(204, 204, 204);
-
-}
-.float-right {
-float: right;
-clear: both;
-}
-#header-wrapper {
-background-color: #ffc964;
-position: absolute;
-top: 0px;
-left: 0;
-height: 60px;
-width: 100%;
-box-shadow: 0 0 10px 5px ;
-
+    border: 1px solid orange;
+    border-radius: 20px;
+    box-shadow: 0px 1px 1px rgb(204, 204, 204);
 }
 
-#top-left-menu {
-    padding: auto 30px;
-    height: 95%;
-}
-
-.question {
+.haveAccount {
     font-size: 15pt;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -217,4 +192,21 @@ box-shadow: 0 0 10px 5px ;
 
 .todo-entry li:nth-child(5){
     border: transparent 1px solid;
+}
+
+
+#header-wrapper {
+    background-color: #ffc964;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0 0 10px 5px ;
+
+}
+
+#top-left-menu {
+    padding: auto 30px;
+    height: 95%;
 }

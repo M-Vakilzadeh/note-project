@@ -31,7 +31,7 @@ if (isset($_SESSION['email'])){
       <br>
     </form>
   </div>
-    <div class=question>don't have an account?</div>
+    <div class=haveAccount>don't have an account?</div>
     <a href="sign-up.php"><button class="btn w100">sign-up</button></a>
     <a href="home.php"><button class="btn w100">home</button></a>   
 
