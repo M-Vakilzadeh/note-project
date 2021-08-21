@@ -9,7 +9,6 @@ $records = $db->query("SELECT * FROM x_note WHERE note_id=$id");
 $oldTitle = $records[0]["title"];
 $oldDescription = $records[0]["description"];
 $oldDate = $records[0]["eventTime"];
-$date = date_format(new DateTime($oldDate), "c");
 
 ?>
 <html>
@@ -29,8 +28,8 @@ $date = date_format(new DateTime($oldDate), "c");
       <br>
       <textarea type="text" placeholder="description" name="newDescription"><?=$oldDescription?></textarea>
       <br>
-      <input type="datetime-local" placeholder="Date and Time" name="newDateTime" value="<?=$date?>">
-      <input type="text" placeholder="Date and Time" name="newDateTime" value="<?=$date?>">
+      <input type="datetime-local" placeholder="Date and Time" name="newDateTime" value="08/24/2021 11:25 PM">
+      <input type="text" placeholder="Date and Time" name="newDateTime" value="<?=$oldDate?>">
       <br>
       <div style="margin-top: 20px;">
       <button class="btn w100" name="submit" type="submit">submit</button>
