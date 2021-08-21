@@ -10,8 +10,6 @@ $oldTitle = $records[0]["title"];
 $oldDescription = $records[0]["description"];
 $oldDate = $records[0]["eventTime"];
 
-echo $oldDate ;
-echo date('Y-m-d\TH:i:sP', $oldDate)
 ?>
 <html>
   <head>
