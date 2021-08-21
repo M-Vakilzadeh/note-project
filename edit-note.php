@@ -10,6 +10,8 @@ $oldTitle = $records[0]["title"];
 $oldDescription = $records[0]["description"];
 $oldDate = $records[0]["eventTime"];
 
+echo $oldDate ;
+echo date('Y-m-d\TH:i:sP', $oldDate)
 ?>
 <html>
   <head>
@@ -28,8 +30,9 @@ $oldDate = $records[0]["eventTime"];
       <br>
       <textarea type="text" placeholder="description" name="newDescription"><?=$oldDescription?></textarea>
       <br>
-      <input type="datetime-local" placeholder="Date and Time" name="newDateTime" value="08/24/2021 11:25 PM">
-      <input type="text" placeholder="Date and Time" name="newDateTime" value="<?=$oldDate?>">
+      <input type="datetime-local" placeholder="Date and Time" name="newDateTime" value="<? echo date('Y-m-d\TH:i', strtotime($oldDate))?>">
+      <br>
+      <input type="text" placeholder="Date and Time" name="newDateTime" value="<? echo date('Y-m-d\TH:i', strtotime($oldDate)); ?>">
       <br>
       <div style="margin-top: 20px;">
       <button class="btn w100" name="submit" type="submit">submit</button>
