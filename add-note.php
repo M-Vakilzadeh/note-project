@@ -18,8 +18,11 @@ require_once('main.php');
       <br>
       <textarea type="text" placeholder="description" name="description"></textarea>
       <br>
+      <input type="datetime-local" placeholder="Date and Time" name="dateTime">
+      <br>
       <div style="margin-top: 20px;">
       <button class="btn w100" name="submit" type="submit">submit</button>
+      <button type="reset" class="btn w100">reset</button>
       <br>
     </form>
   </div>
