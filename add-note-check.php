@@ -5,7 +5,7 @@ $title = $_POST['title'];
 $description = $_POST['description'];
 $dateTime = $_POST['dateTime'];
 
-
+echo $dateTime;
 
 if (!isset($_SESSION['user_id'])){
     header("location: home.php");

@@ -165,7 +165,7 @@ textarea:focus {
 
 .todo-entry li{
     display: inline-block;
-    margin: 6px ;
+    margin: 4px ;
     padding: 5px 10px;
     border-radius: 20px;
     border: 1px solid #808080;
@@ -191,6 +191,10 @@ textarea:focus {
 }
 
 .todo-entry li:nth-child(5){
+    border: transparent 1px solid;
+}
+
+.todo-entry li:nth-child(6){
     border: transparent 1px solid;
 }
 
