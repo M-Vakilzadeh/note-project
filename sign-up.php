@@ -6,6 +6,7 @@
     ?>
 <html>
   <head>
+    <title>sign-up</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="base.css">
@@ -26,7 +27,7 @@
         <br>
         <input type="password" placeholder="Confirm Password" name="password2">
         <br>
-        <div style="margin-top: 20px;">
+        <div class="mt20">
         <button type="submit" class="btn w100">sign-up</button>
         <button type="reset" class="btn w100">reset</button>
         </form>

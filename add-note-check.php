@@ -1,5 +1,5 @@
 <?
-require_once ('main.php');
+require_once('main.php');
 
 $title = $_POST['title'];
 $description = $_POST['description'];

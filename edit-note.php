@@ -3,16 +3,16 @@ require_once('main.php');
 $db = Db::getInstance();
 
 $id = $_GET['id'];
+$records = $db->first("SELECT * FROM x_note WHERE note_id=$id");
 
-$records = $db->query("SELECT * FROM x_note WHERE note_id=$id");
-
-$oldTitle = $records[0]["title"];
-$oldDescription = $records[0]["description"];
-$oldDate = $records[0]["eventTime"];
+$title = $records["title"];
+$description = $records["description"];
+$date = $records["eventTime"];
 
 ?>
-<html>
+<html lang="en">
   <head>
+    <title>edit-note</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="base.css">
@@ -24,15 +24,13 @@ $oldDate = $records[0]["eventTime"];
     <br><br>
 
     <form action="edit-note-check.php" method="post">
-      <input type="text" placeholder="title" name="newTitle" value="<?=$oldTitle?>">
+      <input type="text" placeholder="title" name="newTitle" value="<?=$title?>">
       <br>
-      <textarea type="text" placeholder="description" name="newDescription"><?=$oldDescription?></textarea>
+      <textarea type="text" placeholder="description" name="newDescription"><?=$description?></textarea>
       <br>
-      <input type="datetime-local" placeholder="Date and Time" name="newDateTime" value="<? echo date('Y-m-d\TH:i', strtotime($oldDate))?>">
+      <input type="datetime-local" placeholder="Date and Time" name="newDateTime" value="<? dateTimeConverter($date);?>">
       <br>
-      <input type="text" placeholder="Date and Time" name="newDateTime" value="<? echo date('Y-m-d\TH:i', strtotime($oldDate)); ?>">
-      <br>
-      <div style="margin-top: 20px;">
+      <div class="mt20">
       <button class="btn w100" name="submit" type="submit">submit</button>
       <button type="reset" class="btn w100">reset</button>
       <br>

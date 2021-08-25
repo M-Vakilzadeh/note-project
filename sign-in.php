@@ -3,8 +3,8 @@ require_once('main.php');
 
 if (isset($_SESSION['email'])){
   $message = "you are already signed in" . "<br>" .
-  '<a href="home.php"><button class="btn">Go to homepage</button></a><br> OR <br><a href="sign-out.php"><button class="btn">sign-out</button></a>';
-  require_once ('msg-success.php');
+      '<a href="home.php"><button class="btn">Go to homepage</button></a><br> OR <br><a href="sign-out.php"><button class="btn">sign-out</button></a>';
+  require_once('msg-success.php');
   exit;
 }
 

@@ -1,5 +1,5 @@
 <? 
-require_once ('main.php');
+require_once('main.php');
 $id = $_GET['id'];
 
 if (!isset($_SESSION['user_id'])){

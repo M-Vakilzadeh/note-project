@@ -1,5 +1,5 @@
 <?
-require_once ('main.php');
+require_once('main.php');
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -8,7 +8,7 @@ $db = Db::getInstance();
 $record = $db->query("SELECT * FROM x_user WHERE email='$email'");
 if ($record == null){
     $message = ("The email does not exist.");
-    require_once ('msg-failed.php');
+    require_once('msg-failed.php');
     exit;
     } else {
     if ($password == $record[0]['password']){
@@ -23,7 +23,7 @@ if ($record == null){
     exit;
     } else {
     $message = "sign in in in failed, Check your email and password.";
-    require_once ('msg-failed.php');
+    require_once('msg-failed.php');
     exit;
     
     }
