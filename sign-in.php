@@ -18,7 +18,7 @@ if (isset($_SESSION['email'])){
 <body>
   <div>
   <div class="tac">
-    <img src="img/notepad-pngrepo-com.png" alt="notes" width="300px">
+    <img src="img/notepad.png" alt="notes" width="270px">
     <br><br>
 
     <form id="submit" action="sign-in-check.php" method="post">
@@ -32,8 +32,10 @@ if (isset($_SESSION['email'])){
     </form>
   </div>
     <div class=haveAccount>don't have an account?</div>
-    <a href="sign-up.php"><button class="btn w100">sign-up</button></a>
-    <a href="home.php"><button class="btn w100">home</button></a>   
+      <div class="mb50">
+          <a href="sign-up.php"><button class="btn w100">sign-up</button></a>
+          <a href="home.php"><button class="btn w100">home</button></a>
+      </div>
 
 </div>
 

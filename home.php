@@ -16,6 +16,7 @@ if (!$isGuest){
     <meta charset="UTF-8">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="style.css">
+
     <title>homepage</title>
 </head>
 <body>
@@ -23,17 +24,18 @@ if (!$isGuest){
         <div id="top-left-menu">
         <?
          if ($isGuest) { ?>
-            <a href="home.php"><button class="btn">home</button></a>   
+            <a href="home.php"><button class="btn">Home</button></a>
             <a href="sign-in.php"><button class="btn">sign-in</button></a>   
-            <img src="img/profile.jpg" class="profile-pic">
+            <img src="img/profiles.jpg" class="profile-pic">
             <span>Welcome Guest</span>
             
             <? } else { ?>
-            <a href="home.php"><button class="btn">home</button></a>   
-            <a href="sign-out.php"><button class="btn">sign-out</button></a>   
-            <img src="img/profile.jpg" class="profile-pic">
-            <span>Welcome <?=$_SESSION['fullname']?></span>  
-            <? } ?> 
+            <a href="home.php"><button class="btn">Home</button></a>
+            <a href="add-note.php"><button class="btn mt50">Add notes</button></a>
+            <a href="sign-out.php"><button class="btn">sign-out</button></a>
+            <img src="img/profiles.jpg" class="profile-pic">
+            <span>Welcome <?=$_SESSION['fullname']?></span>
+            <? } ?>
         </div>
     </div>
     <div class="div-home tac">
@@ -45,9 +47,9 @@ if (!$isGuest){
                     <li>Titles</li>
                     <li>Descriptions</li>
                     <li>DateAndTimes</li>
-                    <li style="border: 1px solid #808080;border-radius: 20px;">IsDone</li>
-                    <li style="border: 1px solid #808080;border-radius: 20px;">Remove</li>
-                    <li style="border: 1px solid #808080;border-radius: 20px;">Edit</li>
+                    <li>Isdone</li>
+                    <li>Remove</li>
+                    <li>Edit</li>
                 </ul>
         <?  if ($records == null){$records = array(); }  
             foreach ($records as $record){
@@ -67,7 +69,7 @@ if (!$isGuest){
                     <li><a href="edit-note.php?id=<?=$record['note_id']?>"><button class="btn-check">edit</button></a></li>
                 </ul>
         <?  } ?>
-                <a href="add-note.php"><button class="btn mt50">Add notes</button></a>
+
     <?  } ?> 
     </div>
 </body>

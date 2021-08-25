@@ -3,16 +3,16 @@ require_once('main.php');
 $db = Db::getInstance();
 
 $id = $_GET['id'];
+$records = $db->first("SELECT * FROM x_note WHERE note_id=$id");
 
-$records = $db->query("SELECT * FROM x_note WHERE note_id=$id");
-
-$oldTitle = $records[0]["title"];
-$oldDescription = $records[0]["description"];
-$oldDate = $records[0]["eventTime"];
+$oldTitle = $records["title"];
+$oldDescription = $records["description"];
+$oldDate = $records["eventTime"];
 
 ?>
-<html>
-  <head>
+<html lang="en">
+  <head >
+    <title>edit-note</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="base.css">
@@ -20,25 +20,24 @@ $oldDate = $records[0]["eventTime"];
 <body>
   <div>
   <div class="tac">
-    <img src="img/notepad-pngrepo-com.png" alt="notes" width="300px">
+    <img src="img/notepad.png" alt="notes" width="270px">
     <br><br>
 
-    <form action="edit-note-check.php" method="post">
+    <form action="edit-note-check.php?id=<?= $id?>" method="post">
       <input type="text" placeholder="title" name="newTitle" value="<?=$oldTitle?>">
       <br>
       <textarea type="text" placeholder="description" name="newDescription"><?=$oldDescription?></textarea>
       <br>
-      <input type="datetime-local" placeholder="Date and Time" name="newDateTime" value="<? echo date('Y-m-d\TH:i', strtotime($oldDate))?>">
+      <input type="datetime-local" placeholder="Date and Time" name="newDateTime" value="<? dateTimeConverter($oldDate);?>">
       <br>
-      <input type="text" placeholder="Date and Time" name="newDateTime" value="<? echo date('Y-m-d\TH:i', strtotime($oldDate)); ?>">
-      <br>
-      <div style="margin-top: 20px;">
+      <input type="hidden" value="<?=$id?>" name="id">
+      <div class="mt20">
       <button class="btn w100" name="submit" type="submit">submit</button>
       <button type="reset" class="btn w100">reset</button>
       <br>
     </form>
   </div>
-    <a href="home.php"><button class="btn w100">home</button></a>   
+    <a href="home.php"><button class="btn w100 mb50">home</button></a>
 
 </div>
 

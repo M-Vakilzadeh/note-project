@@ -26,6 +26,10 @@ function dump($var, $return = false){
 function getCurrentDateTime(){
   return date("Y-m-d H:i:s");
 }
-  
+
+
+function dateTimeConverter($oldDate){
+    echo date('Y-m-d\TH:i', strtotime($oldDate));
+}
 
 ?>

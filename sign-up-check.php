@@ -31,7 +31,7 @@ if ($password1 != $password2){
 
 $db->insert("INSERT INTO x_user 
 (email, fullname, nickname, password, registerTime, lastVisitTime) VALUES 
-('$email', '$name', '$nickname', '$password1', '$time', '$time'");
+('$email', '$name', '$nickname', '$password1', '$time', '$time')");
     $message = "You are successfully signed up,please
     <a href='sign-in.php'><button class='btn'>sign in</button></a>";
     require_once "msg-success.php";
